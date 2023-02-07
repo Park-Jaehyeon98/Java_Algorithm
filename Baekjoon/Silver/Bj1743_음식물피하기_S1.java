@@ -41,12 +41,14 @@ public class Bj1743_음식물피하기_S1 {
 		m = Integer.parseInt(st.nextToken());
 		k = Integer.parseInt(st.nextToken());
 		arr = new int[n][m];
-
+		visited = new boolean[n][m];
+		
+		
 		for (int i = 0; i < k; i++) {
 			st = new StringTokenizer(br.readLine());
 			int x = Integer.parseInt(st.nextToken());
 			int y = Integer.parseInt(st.nextToken());
-			arr[n-x][y-1] = 1;
+			arr[x-1][y-1] = 1;
 		}
 
 		for (int i = 0; i < n; i++) {
@@ -58,6 +60,7 @@ public class Bj1743_음식물피하기_S1 {
 
 			}
 		}
+		System.out.println(area);
 
 	}
 
